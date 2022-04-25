@@ -1,7 +1,9 @@
 package com.inflearn.inflearnthejava;
 
+import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.IntConsumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
@@ -34,5 +36,14 @@ public class Foo {
     System.out.println(startWith.test("kimjae"));
     System.out.println(startWith.test("jae"));
     System.out.println(startWith.negate().test("kimjae"));
+
+    Foo foo = new Foo();
+    foo.run();
+  }
+
+  private void run() {
+    int baseNumber = 10;
+    IntConsumer printInt = (i) -> System.out.println(i + baseNumber);
+    printInt.accept(10);
   }
 }
