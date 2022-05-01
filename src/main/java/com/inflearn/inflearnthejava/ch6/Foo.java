@@ -1,4 +1,4 @@
-package com.inflearn.inflearnthejava.ch4;
+package com.inflearn.inflearnthejava.ch6;
 
 public interface Foo {
 
