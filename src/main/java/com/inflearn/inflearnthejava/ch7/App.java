@@ -1,5 +1,6 @@
 package com.inflearn.inflearnthejava.ch7;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -43,5 +44,9 @@ public class App {
             return s;
         }).collect(Collectors.toList());
         parrelCollect.forEach(System.out::println);
+
+        System.out.println(2.0 - 1.1);
+        BigDecimal subtract = BigDecimal.valueOf(2, 0).subtract(BigDecimal.valueOf(11, 1));
+        System.out.println("부동소수점 수를 2진수 체계로 나타내기 떄문에 2진수는 1/10을 정확히 나타낼 수 없기 때문에 BigDecimal 사용해야 한다 = " + subtract);
     }
 }
