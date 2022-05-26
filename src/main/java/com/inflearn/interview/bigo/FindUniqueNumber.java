@@ -55,7 +55,10 @@ public class FindUniqueNumber {
     private int solution3(int[] numbers) {
         int uniqueNum = 0;
         for (int number : numbers) {
-            uniqueNum ^= number;
+            System.out.println("==================");
+            System.out.println("uniqueNum = " + uniqueNum + ", number=" + number);
+            uniqueNum ^= number; // XOR
+            System.out.println("uniqueNum = " + uniqueNum + ", number=" + number);
         }
         return uniqueNum;
     }
